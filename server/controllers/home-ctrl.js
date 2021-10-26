@@ -1,11 +1,12 @@
 const db = require('../db/index');
 const City = require('../models/city');
 const Place = require('../models/place');
-const Reviews = require('../models/review');
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-statistics = async (req, res) => {
+let homeValues = [];
+
+statistics = async () => {
     try {
         const allCities = await City.find();
         const statArray = [];
@@ -57,14 +58,10 @@ statistics = async (req, res) => {
 
             statArray.push(topPlace);
         }
-
-        return res.render('index', { homeReturn: statArray });
+        return statArray;
     }
     catch (e) {
-        return res.json({
-            success: false,
-            message: 'Error in loading home page data',
-        });
+        return [];
     }
 }
 
@@ -95,4 +92,27 @@ async function statHelper(place) {
     }
 }
 
-module.exports = { statistics };
+getValues = async () => {
+    try {
+        while (homeValues.length == 0) {
+            homeValues = await statistics();
+        }
+    }
+    catch (e) {
+        return;
+    }
+}
+
+rend = async (req, res) => {
+    try {
+        return await res.render('index.ejs', { homeReturn: homeValues });
+    }
+    catch (e) {
+        return res.json({
+            success: false,
+            message: 'Error in loading home page data',
+        });
+    }
+}
+
+module.exports = { rend, getValues };

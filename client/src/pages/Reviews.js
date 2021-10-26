@@ -16,6 +16,7 @@ import Modal from 'react-bootstrap/Modal'
 import AddReview from '../components/AddReview'
 import Form from 'react-bootstrap/Form'
 import rates_logo from '../components/rates.svg';
+import guc from '../components/guc.jpg'
 import verify_logo from '../components/verify.svg';
 import questions_logo from '../components/questions.svg';
 import '../reviews-style.css';
@@ -51,7 +52,7 @@ export default class Reviews extends Component {
         verified: false,
         show: false,
         showVerification: false,
-        isReview: true,
+        isReview: (window.location.pathname === "/reviews" ? true : false),
         questions: [],
         reviews: [],
         qText: "",
@@ -218,7 +219,8 @@ export default class Reviews extends Component {
     async handleGovChange(event, govObj) {
         this.setState({
             governorate: govObj ? govObj.id : '',
-            govInputValue: govObj
+            govInputValue: govObj,
+            disInputValue: ''
         });
         if (govObj) {
             await api.getAllDistricts(govObj.id).then(districtArr => {
@@ -362,7 +364,7 @@ export default class Reviews extends Component {
         }
     }
     render() {
-        const { questions, reviews, cities, districts, lang } = this.state
+        const { questions, reviews, lang, district } = this.state
         return (
             <div className="reviews-wrapper">
                 <header>
@@ -413,7 +415,7 @@ export default class Reviews extends Component {
                                             this.handleDistTextChange(event, newInputValue);
                                         }}
                                         // id="controllable-states-demo"
-                                        options={this.state.districts.map((d) => { return { label: d.name, id: d._id } })}
+                                        options={this.state.districts.map((d) => { return { label: d.name, id: d._id, location: d.location } })}
                                         sx={{ width: 300 }}
                                         renderInput={(params) => <TextField {...params} label={lang ? "District" : "المكان"} />}
                                     />
@@ -495,7 +497,8 @@ export default class Reviews extends Component {
                                 </div>
 
                             </div>
-                            {(!this.state.isReview) ?
+                            {this.state.district ? ((!this.state.isReview)
+                                ?
                                 <InputGroup>
                                     <FormControl
                                         value={this.state.qText}
@@ -504,9 +507,17 @@ export default class Reviews extends Component {
                                     />
                                     <Button onClick={this.handleAddQuestion.bind(this)} variant="mbutton">{lang ? "Add question" : "أضف سؤال"}</Button>
                                 </InputGroup>
-                                : <Button onClick={this.handleShowReview.bind(this)} variant="mbutton">{lang ? "Add review" : "أضف مراجعة"}</Button>}
+                                :
+                                <Button onClick={this.handleShowReview.bind(this)} variant="mbutton">{lang ? "Add review" : "أضف تقييم"}</Button>)
+                                : ""
+                            }
                         </div>
-
+                        {this.state.district
+                            ? (<div className="place-info">
+                                <img src={guc} ></img>
+                                <iframe src={district.location} allowFullScreen loading="lazy" />
+                            </div>)
+                            : ""}
                     </div>
 
                     <Modal

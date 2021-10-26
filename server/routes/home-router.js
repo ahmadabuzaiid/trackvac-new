@@ -4,6 +4,6 @@ const HomeCtrl = require('../controllers/home-ctrl');
 
 const router = express.Router();
 
-router.get('/home', catchAsync(HomeCtrl.statistics));
+router.get('/home', catchAsync(HomeCtrl.rend));
 
 module.exports = router;
