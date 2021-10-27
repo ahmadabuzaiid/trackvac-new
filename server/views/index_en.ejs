@@ -59,7 +59,7 @@
           </button>
           <!--Start Logo -->
           <div class="logo-nav">
-            <a href="index.html">
+            <a href="http://localhost:3000/trackvac-api/home">
               <img src="/images/white png logo.png" alt="TrackVac logo" width="150rem" />
             </a>
           </div>
@@ -67,40 +67,25 @@
           <div class="clear-toggle"></div>
           <div id="main-menu" class="collapse scroll navbar-right">
             <ul class="nav">
-              <div id="google_translate_element"></div>
 
-              <script type="text/javascript">
-                function googleTranslateElementInit() {
-                  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ar,en' }, 'google_translate_element');
+              <li class="active"> <a href="http://localhost:3000/trackvac-api/home">Home</a> </li>
 
-                }
-              </script>
-
-              <script type="text/javascript"
-                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-              <li class="active"> <a href="#home">Home</a> </li>
-
-              <li> <a href="#about">About</a> </li>
+              <li> <a href="http://localhost:3000/trackvac-api/about">About</a> </li>
 
               <li> <a href="http://localhost:8000/reviews">Reviews</a> </li>
 
               <li> <a href="http://localhost:8000/questions">Questions</a> </li>
 
-              <!-- <li>
-                  <div> <img
-                      src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Globe_icon-white.svg/1200px-Globe_icon-white.svg.png'
-                      style='width:25px ; height:25px ; color:#276678; margin-top: 50px;'>
-                  </div>
-                  <p> <button onclick="googleTranslateElementInit()"> ENG|عربي </button>
+              <li> <a></a> </li>
+              <li> <a></a> </li>
 
-                  </p>
-
-                </li> -->
-
-
-
-
+              <li>
+                <ul>
+                  <li class="active"> <a href="http://localhost:3000/trackvac-api/home/en">En</a></li>
+                  <li class=""> <a>|</a></li>
+                  <li class=""> <a href="http://localhost:3000/trackvac-api/home/ar">عربي</a></li>
+                </ul>
+              </li>
             </ul>
           </div><!-- end main-menu -->
         </div>
@@ -134,7 +119,7 @@
             <div class="container">
               <div class="big">Took the vaccine?</div>
               <div class="small">Want to share your experience to help others</div>
-              <a href="" class="middle btn btn-white" id="sliderbtn">WRITE REVIEW</a>
+              <a href="http://localhost:8000/reviews" class="middle btn btn-white" id="sliderbtn">WRITE REVIEW</a>
             </div>
           </div>
           <img src="/images/slider/vaccine.jpg" alt="">
@@ -145,7 +130,7 @@
             <div class="container">
               <div class="big">Still not vaccinated?</div>
               <div class="small">Want to know more about others' experience getting vaccinated</div>
-              <a href="#works" class=" middle btn btn-white" id="sliderbtn">READ REVIEWS</a>
+              <a href="http://localhost:8000/reviews" class=" middle btn btn-white" id="sliderbtn">READ REVIEWS</a>
             </div>
           </div>
           <img src="/images/slider/vaccine2.jpeg" alt="">
@@ -156,7 +141,7 @@
             <div class="container">
               <div class="big">Have a question? </div>
               <div class="small">Are you having questions regarding your vaccination place</div>
-              <a href="#works" class="middle btn btn-white" id="sliderbtn">ASK OTHERS</a>
+              <a href="http://localhost:8000/questions" class="middle btn btn-white" id="sliderbtn">ASK OTHERS</a>
             </div>
           </div>
           <img src="/images/slider/vaccine2.jpg" alt="">
@@ -499,343 +484,6 @@
 
 
 
-  <!--Start video-->
-  <section id="about" class="section parallax">
-    <div class="overlay"> <img src="/images/slider/vaccine2.jpeg" alt='imageID'
-        style='width:auto; height:auto; display:block; height: 100%; width:100%'> </div>
-    <div class="container">
-      <div class="row">
-
-        <div class="title-box text-center white">
-          <h2 class="title" style="color: #121213;">About Us</h2>
-        </div>
-
-
-        <!--Start Services-->
-
-        <!--Services Item -->
-        <div class="col-md-4">
-          <div class="services-box" style="border: 3px solid #95b2c8;">
-            <div class="services-icon"> <i class="icon-global"></i> </div>
-            <div class="services-desc">
-              <h4 style="color: #0d0d0e;font-weight: 900;">Vision</h4>
-              <p style="color: #0d0d0e;font-weight:500;">Raising the awareness of the local
-                community about the COVID-19 vaccination process.</p>
-            </div>
-          </div>
-        </div>
-        <!--End services Item-->
-
-        <!--Services Item-->
-        <div class="col-md-4">
-          <div class="services-box" style="border: 3px solid #4792a7;">
-            <div class="services-icon"> <i class="icon-target"></i> </div>
-            <div class="services-desc">
-              <h4 style="color: #111111;font-weight: 900;">Aim</h4>
-              <p style="color: #0f0f0f;font-weight: 500;">Facilitating the process of vaccination by providing
-                necessary
-                information about how to recieve the vaccine locally. </p>
-            </div>
-          </div>
-        </div>
-        <!--End services Item-->
-
-        <!--Services Item -->
-        <div class="col-md-4">
-          <div class="services-box" style="border: 3px solid #195161;">
-            <div class="services-icon"> <i class="icon-aperture"></i> </div>
-            <div class="services-desc">
-              <h4 style="color: #0a0a0a;font-weight: 900;">Mission</h4>
-              <p style="color: #0d0d0e;font-weight: 500;">Enabling community members
-                to exchange and share their experience to help in
-                the fight against the pandemic.</p>
-            </div>
-          </div>
-        </div>
-        <!--End services Item-->
-
-
-
-      </div> <!-- /.row-->
-    </div> <!-- /.container-->
-  </section>
-  <!--End video-->
-
-
-
-  <!--Start clients-->
-  <section id="clients" class="section" style="padding: 50px 0px 100px;;">
-    <div class="container">
-      <div class="row">
-
-        <div class="title-box text-center">
-          <h2 class="title" style="color: #276678;">Our Team</h2>
-        </div>
-
-        <div class="clients-carousel">
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/maggie.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Dr. Maggie Marshaly</p>
-                <p style="font-size: 11px;">Founder</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/rania.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Dr. Rania Sweif</p>
-                <p style="font-size: 11px;">Founder</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/eman.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Dr. Eman Azab</p>
-                <p style="font-size: 11px;">Founder</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/tasneem.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Tasneem Hazem</p>
-                <p style="font-size: 11px;">Project Manager</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/jomana.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Jomana Wael</p>
-                <p style="font-size: 11px;">Project Coordinator</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/alia.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Alia Mahmoud</p>
-                <p style="font-size: 11px;">Project Coordinator</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/lobna.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Lobna El Nahas</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/samir.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Ahmed Samir</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/omar.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Omar Aref</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/salma.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Salma Teama</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/nawraz.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Nawraz</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/belal.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Ahmed Belal</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/haidy.JPG" alt="" width="150px" />
-                <p style="margin-bottom: 0px;">Haidy Tohfa</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/ahmed.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Ahmed Tamer</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/amera.JPG" alt="" width="150px" />
-                <p style="margin-bottom: 0px;">Amera Salah</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/mark.JPG" alt="" width="150px" />
-                <p style="margin-bottom: 0px;">Mark Malak</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/aya.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Aya Ahmed</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/khaled.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Khaled Romeh</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/lina.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Lina Emad</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/mark2.JPG" alt="" width="150px" />
-                <p style="margin-bottom: 0px;">Mark Wafik</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/salma2.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Salma Shereef</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/youssef.JPG" alt="" width="150px" />
-                <p style="margin-bottom: 0px;">Youssef Magdy</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-          <!-- Clients Logo Item-->
-          <div class="item">
-            <a href="">
-              <figure>
-                <img src="/images/team/youssefk.JPG" alt="" />
-                <p style="margin-bottom: 0px;">Yusuf El Kilany</p>
-                <p style="font-size: 11px;">Team Member</p>
-              </figure>
-            </a>
-          </div>
-
-        </div>
-      </div>
-      <!--/.row-->
-    </div>
-    <!--/.container-->
-  </section>
-  <!--End clients-->
-
   <!--Start Footer-->
   <footer>
     <div class="container">
@@ -847,10 +495,12 @@
             <!--start social icons-->
           <div class="social-icons">
             <ul>
-              <li><a href=""><i class="fa fa-facebook"></i></a></li>
-              <li> <a href=""><i class="fa fa-twitter"></i></a></li>
-              <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-              <li><a href=""><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/Track-Vac-103424108805426/reviews/?ref=page_internal"
+                  target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li> <a href="https://twitter.com/TrackVacEgypt" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="mailto:example@email.com" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="https://www.instagram.com/trackvacegypt/?hl=en" target="_blank"><i
+                    class="fa fa-instagram"></i></a></li>
             </ul>
           </div>
 
@@ -865,12 +515,6 @@
     </div> <!-- /.container-->
   </footer>
   <!--End Footer-->
-
-  <a href="http://localhost:8000/reviews" class="scrollup" id="tooltip" title="Add Review."> <i
-      class="fa fa-pencil-square-o" aria-hidden="true"></i>
-    </i> </a>
-
-
 
   <!--Plugins-->
   <script type="text/javascript" src="/Hfiles/js/jquery-1.11.1.min.js"></script>

@@ -94,9 +94,11 @@ async function statHelper(place) {
 
 getValues = async () => {
     try {
-        while (homeValues.length == 0) {
-            homeValues = await statistics();
+        let tmpArr = [];
+        while (tmpArr.length == 0) {
+            tmpArr = await statistics();
         }
+        homeValues = tmpArr;
     }
     catch (e) {
         return;
@@ -105,7 +107,10 @@ getValues = async () => {
 
 rend = async (req, res) => {
     try {
-        return await res.render('index.ejs', { homeReturn: homeValues });
+        if (req.params.lang == 'ar') {
+            return await res.render('index_ar.ejs', { homeReturn: homeValues });
+        }
+        return await res.render('index_en.ejs', { homeReturn: homeValues });
     }
     catch (e) {
         return res.json({
@@ -115,4 +120,16 @@ rend = async (req, res) => {
     }
 }
 
-module.exports = { rend, getValues };
+rendAbout = async (req, res) => {
+    try {
+        return res.render('about.ejs');
+    }
+    catch (e) {
+        return res.json({
+            success: false,
+            message: 'Error in loading about data',
+        });
+    }
+}
+
+module.exports = { rend, rendAbout, getValues };
