@@ -26,8 +26,8 @@ function App() {
               )
             }}
           />
-          <Route path="/questions" component={Reviews} />
-          <Route path="/reviews" component={Reviews} />
+          <Route path="/trackvac-api/questions" component={Reviews} />
+          <Route path="/trackvac-api/reviews" component={Reviews} />
         </div>
       </Router>
     </div>
