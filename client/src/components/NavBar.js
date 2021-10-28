@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import white_logo from './white-png.png';
-import black_logo from './black_logo.svg';
-import { Link } from 'react-router-dom';
 import LanguageIcon from '@mui/icons-material/Language';
 export default class NavBar extends Component {
 
@@ -18,7 +16,7 @@ export default class NavBar extends Component {
                     <a href="http://139.59.215.224:5000/trackvac-api/home">
                         Home
                     </a>
-                    <a className="active" href="/reviews">Reviews</a>
+                    <a className="active" href="/trackvac-api/reviews">Reviews</a>
                     <div onClick={this.props.handleLang} className="lang-btn">
                         <LanguageIcon style={{ width: '25px', height: '25px' }} />
                         <div style={{ display: 'flex', gap: '2px' }}>

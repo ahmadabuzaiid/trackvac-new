@@ -422,7 +422,7 @@ export default class Reviews extends Component {
                                                     }}>
 
 
-                                                    <img src={questions_logo} width="30%" height="30%"></img>
+                                                    <img src={questions_logo} width="30%" height="30%" alt="question_logo"></img>
 
                                                     <p style={{ textAlign: "centre" }}> {lang ? "This place has no questions asked yet. " : "لا يوجد اسئلة حتى الان "} </p>
                                                 </div>)
@@ -447,7 +447,7 @@ export default class Reviews extends Component {
                                                     }}>
 
 
-                                                    <img src={rates_logo} width="30%" height="30%"></img>
+                                                    <img src={rates_logo} width="30%" height="30%" alt="rate_logo"></img>
 
                                                     <p style={{ textAlign: "centre" }}> {lang ? "This place has no ratings yet." : "لا يوجد تقييمات حتى الان "} </p>
                                                 </div>)
@@ -473,8 +473,8 @@ export default class Reviews extends Component {
                         </div>
                         {this.state.district
                             ? (<div className="place-info">
-                                <img src={guc} ></img>
-                                <iframe src={district.location} allowFullScreen loading="lazy" />
+                                <img src={guc} alt="place_img"></img>
+                                <iframe src={district.location} allowFullScreen loading="lazy" title="place_location"/>
                             </div>)
                             : ""}
                     </div>
@@ -569,7 +569,7 @@ export default class Reviews extends Component {
                         </Modal.Header>
                         <Modal.Body>
                             <div className="flex-center">
-                                <img src={verify_logo} width="30%" height="30%"></img>
+                                <img src={verify_logo} width="30%" height="30%" alt="verify_logo"></img>
                                 <Form>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
                                         <Form.Label>VACCINATION ID:</Form.Label>
