@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import AverageRates from '../components/AverageRates'
-import Dropdown from '../components/Dropdown'
 import NavBar from '../components/NavBar'
 import Review from '../components/Review'
 import { Rating } from "@material-ui/lab";
@@ -13,7 +12,6 @@ import InputGroup from 'react-bootstrap/InputGroup'
 import Button from 'react-bootstrap/Button'
 import FormControl from 'react-bootstrap/FormControl'
 import Modal from 'react-bootstrap/Modal'
-import AddReview from '../components/AddReview'
 import Form from 'react-bootstrap/Form'
 import rates_logo from '../components/rates.svg';
 import guc from '../components/guc.jpg'
@@ -292,7 +290,6 @@ export default class Reviews extends Component {
         return mr;
     }
     handleGovTextChange(event, input) {
-        // event.preventDefault();
         this.setState({
             govText: input
         })
@@ -300,7 +297,6 @@ export default class Reviews extends Component {
 
     }
     handleDistTextChange(event, input) {
-        // event.preventDefault();
         this.setState({
             disText: input
         })
@@ -308,7 +304,6 @@ export default class Reviews extends Component {
 
     }
     handleGovInputChange(event, input) {
-        // event.preventDefault() ; 
         this.setState({
             govInputValue: input
         })
@@ -316,7 +311,6 @@ export default class Reviews extends Component {
 
     }
     handleDisInputChange(event, input) {
-        // event.preventDefault() ; 
         this.setState({
             disInputValue: input
         })
@@ -368,7 +362,6 @@ export default class Reviews extends Component {
         return (
             <div className="reviews-wrapper">
                 <header>
-                    {/* this shouldnt be here remember to take it out !!!! */}
                     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
                     <NavBar lang={lang} handleLang={this.handleLang.bind(this)} />
                 </header>
@@ -383,20 +376,9 @@ export default class Reviews extends Component {
                                     <Autocomplete
                                         size="small"
                                         value={this.state.govInputValue}
-                                        onChange={(event, newValue) => {
-                                            // this.setState({
-                                            //     autoValue: newValue
-                                            // })
-                                            this.handleGovChange(event, newValue);
-                                        }}
+                                        onChange={(event, newValue) => {this.handleGovChange(event, newValue);}}
                                         inputValue={this.state.govText}
-                                        onInputChange={(event, newInputValue) => {
-                                            // this.setState({
-                                            //     autoInputValue: newInputValue
-                                            // })
-                                            this.handleGovTextChange(event, newInputValue);
-                                        }}
-                                        // id="controllable-states-demo"
+                                        onInputChange={(event, newInputValue) => {this.handleGovTextChange(event, newInputValue);}}
                                         options={this.state.cities.map((c) => { return { label: c.name, id: c._id } })}
                                         sx={{ width: 300 }}
                                         renderInput={(params) => <TextField {...params} label={lang ? "Governorate" : "المحافظه"} />}
@@ -420,29 +402,6 @@ export default class Reviews extends Component {
                                         renderInput={(params) => <TextField {...params} label={lang ? "District" : "المكان"} />}
                                     />
                                 </div>
-
-                                {/* <div style={{ width: '25%' }}>
-                            <label for="Governorate: ">Governorate: </label>
-                            <Form.Select onChange={this.handleGovChange.bind(this)} >
-                                <option value="" selected="selected">Please Choose City</option>
-                                {cities.data ? (cities.data).map((c) => (
-                                    <option value={c._id}>{c.name} </option>
-                                )) : ""
-                                }
-                            </Form.Select>
-                        </div>
-
-                        <div style={{ width: '25%' }}>
-                            <label for="District: ">District: </label>
-                            <Form.Select value={this.state.district ? this.state.district : ""}
-                                onChange={this.handleDistrictChange.bind(this)} className="dropdown" name="users">
-                                <option value="" disabled >Please Choose District</option>
-                                {districts.data ? (districts.data).map((d) => (
-                                    <option value={d._id}>{d.name} </option>
-                                )) : ""
-                                }
-                            </Form.Select>
-                        </div> */}
 
                             </div>
                             <div className="list-container">
@@ -540,7 +499,6 @@ export default class Reviews extends Component {
                                         placeholder={lang ? "Review title..." : " عنوان المراجعة"}
 
                                     />
-                                    {/* <Button onClick={this.handleSubmit.bind(this)} variant="mbutton">Add question</Button> */}
                                 </InputGroup>
                                 <br />
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">

@@ -17,7 +17,7 @@ const { getValues } = require('./controllers/home-ctrl');
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 const apiPort = 3000;
-baseUrl = '/trackvac-api'
+baseUrl = 'http://139.59.215.224:5000/trackvac-api'
 const app = express();
 
 app.engine('ejs', ejsMate);
