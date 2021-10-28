@@ -4,8 +4,9 @@ const HomeCtrl = require('../controllers/home-ctrl');
 
 const router = express.Router();
 
-router.get('/home', catchAsync(HomeCtrl.rend))
+router.get('/home', catchAsync(HomeCtrl.redirectHome))
+    .get('/about', catchAsync(HomeCtrl.redirectAbout))
     .get('/home/:lang', catchAsync(HomeCtrl.rend))
-    .get('/about', catchAsync(HomeCtrl.rendAbout));
+    .get('/about/:lang', catchAsync(HomeCtrl.rendAbout));
 
 module.exports = router;

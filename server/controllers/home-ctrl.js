@@ -122,7 +122,10 @@ rend = async (req, res) => {
 
 rendAbout = async (req, res) => {
     try {
-        return res.render('about.ejs');
+        if (req.params.lang == 'ar') {
+            return await res.render('about_ar.ejs');
+        }
+        return await res.render('about_en.ejs');
     }
     catch (e) {
         return res.json({
@@ -132,4 +135,28 @@ rendAbout = async (req, res) => {
     }
 }
 
-module.exports = { rend, rendAbout, getValues };
+redirectHome = async (req, res) => {
+    try {
+        return res.redirect('http://localhost:3000/trackvac-api/home/en');
+    }
+    catch (e) {
+        return res.json({
+            success: false,
+            message: 'Error in loading home page data',
+        });
+    }
+}
+
+redirectAbout = async (req, res) => {
+    try {
+        return res.redirect('http://localhost:3000/trackvac-api/about/en');
+    }
+    catch (e) {
+        return res.json({
+            success: false,
+            message: 'Error in loading home page data',
+        });
+    }
+}
+
+module.exports = { rend, rendAbout, getValues, redirectHome, redirectAbout };
