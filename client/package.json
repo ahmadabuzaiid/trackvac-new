@@ -2,7 +2,7 @@
   "name": "reviews",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://139.59.215.224:3000/trackvac-api/reviews",
+  "homepage": "http://localhost:8000/trackvac-api/reviews",
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
@@ -24,7 +24,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "set PORT=3000 && react-scripts start",
+    "start": "set PORT=8000 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
