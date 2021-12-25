@@ -12,6 +12,10 @@ const userSchema = new Schema({
     secondDose: {
         type: Boolean,
         required: true
+    },
+    thirdDose: {
+        type: Boolean,
+        required: true
     }
 });
 
